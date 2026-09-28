@@ -2,3 +2,82 @@ body {
   background-color: #1e1e1e;
   color: #ffffff;
 }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.todo-container {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+}
+.input-section {
+    display: flex;
+    margin-bottom: 20px;
+}
+input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+button {
+    padding: 8px 12px;
+    border: none;
+    background: #2ea44f;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    padding: 10px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+li.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+Use code with caution.Scroll down and click Commit changes....3. Create script.jsClick Add file -> Create new file, name it script.js, and paste this interactive code:javascriptconst taskInput = document.getElementById('taskInput');
+const addBtn = document.getElementById('addBtn');
+const taskList = document.getElementById('taskList');
+
+// Add Task
+addBtn.addEventListener('click', () => {
+    if (taskInput.value.trim() !== "") {
+        const li = document.createElement('li');
+        li.textContent = taskInput.value;
+        
+        // Toggle completed status on click
+        li.addEventListener('click', () => {
+            li.classList.toggle('completed');
+        });
+
+        // Delete button
+        const deleteBtn = document.createElement('span');
+        deleteBtn.textContent = " ❌";
+        deleteBtn.style.cursor = "pointer";
+        deleteBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevents triggering the item click event
+            li.remove();
+        });
+
+        li.appendChild(deleteBtn);
+        taskList.appendChild(li);
+        taskInput.value = "";
+    }
+});
