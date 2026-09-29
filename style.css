@@ -1,10 +1,10 @@
 body {
-  background-color: #ffc6ca;
+  background-color: #ffd3c6;
   color: #fff;
 }
 body {
     font-family: Times New Roman, Arial;
-    background-color: #ffc6ca;
+    background-color: #ffd3c6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@ body {
     margin: 0;
 }
 .todo-container {
-    background: ffae42;
+    background: #ffd4b4;
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -31,7 +31,7 @@ input {
 button {
     padding: 8px 12px;
     border: none;
-    background: #ffae42;
+    background: #ffd4b4;
     color: black;
     cursor: pointer;
     border-radius: 0 4px 4px 0;
@@ -42,8 +42,8 @@ ul {
 }
 li {
     padding: 10px;
-    background: #ffc6ca;
-    border-bottom: 1px solid #ffae42;
+    background: #ffd3c6;
+    border-bottom: 1px solid #ffd4b4;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
