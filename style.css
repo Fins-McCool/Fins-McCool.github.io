@@ -25,7 +25,7 @@ body {
 input {
     flex: 1;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #fff;
     border-radius: 4px 0 0 4px;
 }
 button {
@@ -50,7 +50,7 @@ li {
 }
 li.completed {
     text-decoration: line-through;
-    color: #aaa;
+    color: #fff;
 }
 Use code with caution.Scroll down and click Commit changes....3. Create script.jsClick Add file -> Create new file, name it script.js, and paste this interactive code:javascriptconst taskInput = document.getElementById('taskInput');
 const addBtn = document.getElementById('addBtn');
