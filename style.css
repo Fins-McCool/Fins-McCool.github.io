@@ -25,4 +25,4 @@ header { text-align: center; margin-bottom: 20px; }
 }
 .day { padding: 5px; border-radius: 4px; cursor: pointer; }
 .day:hover { background-color: #ffd4b4; }
-.has-note { background-color: #000; font-weight: bold; }
+.has-note { background-color: #ffd4b4; font-weight: bold; }
