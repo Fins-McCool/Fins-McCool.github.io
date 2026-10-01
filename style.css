@@ -1,10 +1,10 @@
 body {
-  background-color: #ffd3c6;
+  background-color: #f5d0f2;
   color: #fff;
 }
 body {
     font-family: Times New Roman, Arial;
-    background-color: #ffd3c6;
+    background-color: #f5d0f2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +42,7 @@ ul {
 }
 li {
     padding: 10px;
-    background: #ffd3c6;
+    background: #f5d0f2;
     border-bottom: 1px solid #ffd4b4;
     display: flex;
     justify-content: space-between;
