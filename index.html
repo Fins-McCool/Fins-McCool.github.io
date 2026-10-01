@@ -4,34 +4,60 @@
     <meta charset="UTF-8">
     <title>Calendar To-Do List</title>
     <style>
-        body { font-family: Times New Roman, Arial; display: flex; flex-direction: column; align-items: center; margin: 0; padding: 20px; }
-        .calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; width: 100%; max-width: 600px; }
-        .day { border: 1px solid #ffae42; min-height: 80px; padding: 5px; cursor: pointer; }
-        .day:hover { background: #ffc6ca; }
-        .task { background: #007bff; color: white; font-size: 12px; margin-top: 4px; padding: 2px 4px; border-radius: 3px; }
+        body { font-family: Times New Roman; max-width: 600px; margin: 40px auto; padding: 20px; background: #f4f4f9; }
+        h1, h2 { color: #333; }
+        .box { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        input, button { padding: 10px; font-size: 16px; margin-right: 5px; }
+        ul { padding-left: 20px; }
+        li { margin: 10px 0; cursor: pointer; }
+        .completed { text-decoration: line-through; color: #888; }
     </style>
 </head>
 <body>
-    <h1>My Tasks</h1>
-    <div class="calendar" id="calendarGrid"></div>
+    <div class="box">
+        <h1>Calendar</h1>
+        <input type="date" id="selected-date">
+        <p>Selected date tasks will show below.</p>
+    </div>
+
+    <div class="box">
+        <h2>To-Do List</h2>
+        <input type="text" id="task-input" placeholder="Add a new task...">
+        <button onclick="addTask()">Add</button>
+        <ul id="task-list"></ul>
+    </div>
 
     <script>
-        const grid = document.getElementById('calendarGrid');
-        for (let i = 1; i <= 31; i++) {
-            const day = document.createElement('div');
-            day.className = 'day';
-            day.innerHTML = `<strong>${i}</strong>`;
-            day.onclick = () => {
-                const taskText = prompt("Enter task for this day " + i + ":");
-                if (taskText) {
-                    const taskDiv = document.createElement('div');
-                    taskDiv.className = 'task';
-                    taskDiv.textContent = taskText;
-                    day.appendChild(taskDiv);
-                }
-            };
-            grid.appendChild(day);
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        const taskList = document.getElementById('task-list');
+
+        function renderTasks() {
+            taskList.innerHTML = '';
+            tasks.forEach((task, index) => {
+                const li = document.createElement('li');
+                li.textContent = task.text;
+                if (task.completed) li.classList.add('completed');
+                li.onclick = () => toggleTask(index);
+                taskList.appendChild(li);
+            });
+            localStorage.setItem('tasks', JSON.stringify(tasks));
         }
+
+        function addTask() {
+            const input = document.getElementById('task-input');
+            const dateInput = document.getElementById('selected-date');
+            if (input.value.trim() === '') return;
+            tasks.push({ text: `${input.value} (${dateInput.date || 'No Date'})`, completed: false });
+            input.value = '';
+            renderTasks();
+        }
+
+        function toggleTask(index) {
+            tasks[index].completed = !tasks[index].completed;
+            renderTasks();
+        }
+
+        renderTasks();
     </script>
 </body>
 </html>
