@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Calendar Task Planner</title>
+    <title>Calendar To-Do List</title>
     <style>
         body { font-family: Times New Roman, Arial; display: flex; flex-direction: column; align-items: center; margin: 0; padding: 20px; }
         .calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; width: 100%; max-width: 600px; }
@@ -12,7 +12,7 @@
     </style>
 </head>
 <body>
-    <h1>My Calendar Tasks</h1>
+    <h1>My Tasks</h1>
     <div class="calendar" id="calendarGrid"></div>
 
     <script>
@@ -22,7 +22,7 @@
             day.className = 'day';
             day.innerHTML = `<strong>${i}</strong>`;
             day.onclick = () => {
-                const taskText = prompt("Enter task for day " + i + ":");
+                const taskText = prompt("Enter task for this day " + i + ":");
                 if (taskText) {
                     const taskDiv = document.createElement('div');
                     taskDiv.className = 'task';
