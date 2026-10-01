@@ -1,83 +1,28 @@
 body {
-  background-color: #f5d0f2;
-  color: #fff;
-}
-body {
     font-family: Times New Roman, Arial;
-    background-color: #f5d0f2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    margin: 20px;
+    background-color: #ffd3c6;
 }
-.todo-container {
-    background: #f5e6d0;
-    padding: 25px;
+header { text-align: center; margin-bottom: 20px; }
+#planner-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.month {
+    background: white;
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 300px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-.input-section {
-    display: flex;
-    margin-bottom: 20px;
+.month-title { font-weight: bold; text-align: center; margin-bottom: 10px; }
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+    font-size: 14px;
 }
-input {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #fff;
-    border-radius: 4px 0 0 4px;
-}
-button {
-    padding: 8px 12px;
-    border: none;
-    background: #f5e6d0;
-    color: black;
-    cursor: pointer;
-    border-radius: 0 4px 4px 0;
-}
-ul {
-    list-style: none;
-    padding: 0;
-}
-li {
-    padding: 10px;
-    background: #f5d0f2;
-    border-bottom: 1px solid #f5e6d0;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-}
-li.completed {
-    text-decoration: line-through;
-    color: #fff;
-}
-Use code with caution.Scroll down and click Commit changes....3. Create script.jsClick Add file -> Create new file, name it script.js, and paste this interactive code:javascriptconst taskInput = document.getElementById('taskInput');
-const addBtn = document.getElementById('addBtn');
-const taskList = document.getElementById('taskList');
-
-// Add Task
-addBtn.addEventListener('click', () => {
-    if (taskInput.value.trim() !== "") {
-        const li = document.createElement('li');
-        li.textContent = taskInput.value;
-        
-        // Toggle completed status on click
-        li.addEventListener('click', () => {
-            li.classList.toggle('completed');
-        });
-
-        // Delete button
-        const deleteBtn = document.createElement('span');
-        deleteBtn.textContent = " ❌";
-        deleteBtn.style.cursor = "pointer";
-        deleteBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevents triggering the item click event
-            li.remove();
-        });
-
-        li.appendChild(deleteBtn);
-        taskList.appendChild(li);
-        taskInput.value = "";
-    }
-});
+.day { padding: 5px; border-radius: 4px; cursor: pointer; }
+.day:hover { background-color: #ffd4b4; }
+.has-note { background-color: #000; font-weight: bold; }
