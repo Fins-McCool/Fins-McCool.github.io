@@ -1,7 +1,8 @@
-const year = 2027;
+const year = 2027; // Change this to your target year
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const dayNames = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 
+// Load tasks from LocalStorage or start empty
 let tasks = JSON.parse(localStorage.getItem('planner-tasks')) || {};
 
 const container = document.getElementById('planner-container');
@@ -9,6 +10,7 @@ const modal = document.getElementById('task-modal');
 const taskInput = document.getElementById('task-input');
 let activeDateKey = "";
 
+// Generate the full calendar UI
 months.forEach((month, monthIndex) => {
     const monthCard = document.createElement('div');
     monthCard.className = 'month-card';
@@ -17,13 +19,16 @@ months.forEach((month, monthIndex) => {
     const daysGrid = document.createElement('div');
     daysGrid.className = 'days-grid';
 
+    // Add weekday headers
     dayNames.forEach(d => daysGrid.innerHTML += `<div class="day-name">${d}</div>`);
 
+    // Get padding days for the start of the month
     const firstDayIndex = new Date(year, monthIndex, 1).getDay();
     for (let i = 0; i < firstDayIndex; i++) {
         daysGrid.innerHTML += `<div></div>`;
     }
 
+    // Get total days in the month
     const totalDays = new Date(year, monthIndex + 1, 0).getDate();
     for (let day = 1; day <= totalDays; day++) {
         const dateKey = `${year}-${monthIndex + 1}-${day}`;
@@ -43,6 +48,7 @@ months.forEach((month, monthIndex) => {
     container.appendChild(monthCard);
 });
 
+// Modal Logic
 function openModal(dateKey) {
     activeDateKey = dateKey;
     document.getElementById('modal-date-title').innerText = `Tasks for ${dateKey}`;
@@ -59,7 +65,7 @@ document.getElementById('save-task-btn').addEventListener('click', () => {
         if (!tasks[activeDateKey]) tasks[activeDateKey] = [];
         tasks[activeDateKey].push(text);
         localStorage.setItem('planner-tasks', JSON.stringify(tasks));
-        location.reload();
+        location.reload(); // Quick refresh to update dots on UI
     }
 });
 
@@ -72,3 +78,4 @@ function updateTaskList() {
         });
     }
 }
+
