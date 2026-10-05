@@ -1,28 +1,78 @@
 body {
-    font-family: Times New Roman, Arial;
-    margin: 20px;
-    background-color: #ffd3c6;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
 }
-header { text-align: center; margin-bottom: 20px; }
-#planner-container {
+
+.year-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.month {
+
+.month-card {
     background: white;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-.month-title { font-weight: bold; text-align: center; margin-bottom: 10px; }
+
 .days-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 5px;
-    text-align: center;
-    font-size: 14px;
 }
-.day { padding: 5px; border-radius: 4px; cursor: pointer; }
-.day:hover { background-color: #ffd4b4; }
-.has-note { background-color: #ffd4b4; font-weight: bold; }
+
+.day-name {
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #000;
+}
+
+.day {
+    padding: 8px 0;
+    background: #f5e6d0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.day:hover {
+    background: #f5d0f1;
+    color: white;
+}
+
+.day.has-tasks::after {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    background: #e6d0f5;
+    border-radius: 50%;
+}
+
+.modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hidden { display: none !important; }
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: left;
+}
+.modal-buttons { margin-top: 10px; display: flex; gap: 10px; }
