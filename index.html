@@ -7,10 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1 id="year-title">2026 Yearly Planner</h1>
-    </header>
-    <main id="planner-container"></main>
+    <h1>📅 My 2027 Planner</h1>
+    <div id="planner-container" class="year-grid"></div>
+
+    <div id="task-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3 id="modal-date-title">Add Task</h3>
+            <input type="text" id="task-input" placeholder="Enter task description...">
+            <div class="modal-buttons">
+                <button id="save-task-btn">Save</button>
+                <button id="close-modal-btn">Cancel</button>
+            </div>
+            <ul id="day-tasks-list"></ul>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
