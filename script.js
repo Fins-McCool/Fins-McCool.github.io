@@ -2,6 +2,11 @@ const container = document.getElementById('planner-container');
 const currentYear = 2026;
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
+new Calendar('#calendar', {
+    year: 2026,
+    style: 'background'
+});
+
 months.forEach((month, monthIdx) => {
     const monthDiv = document.createElement('div');
     monthDiv.className = 'month';
