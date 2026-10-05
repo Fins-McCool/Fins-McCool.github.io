@@ -1,2 +1,2 @@
-# Heading (Fins-McCool.github.io)
-## Large Subheading (Yearly Planner)
+# Fins-McCool.github.io
+## Yearly Planner
