@@ -1,2 +1,2 @@
-# Fins-McCool.github.io
-## Yearly Planner
+# **Fins-McCool.github.io**
+## *Yearly Planner*
