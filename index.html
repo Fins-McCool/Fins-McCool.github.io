@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yearly Planner & Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Yearly Planner (<span id="current-year"></span>)</h1>
+    </header>
 
+    <main id="planner-container"></main>
+
+    <div id="task-modal" class="hidden">
+        <div class="modal-content">
+            <h3 id="modal-date-title">Tasks for...</h3>
+            <ul id="task-list"></ul>
+            <div class="input-group">
+                <input type="text" id="new-task-input" placeholder="Add a new task...">
+                <button id="save-task-btn">Add</button>
+            </div>
+            <button id="close-modal-btn">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
