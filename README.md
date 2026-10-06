@@ -7,6 +7,6 @@
  1. I have a cat.
     1. His name is Finnegan McCool.
    
-[ ![Alt Text Here](Image_URL) ](Source_URL)
+[ ![E6D0F5](Image_URL) ](Source_URL)
 [ ![Alt Text Here](Image_URL) ](Source_URL)
 [ ![Alt Text Here](Image_URL) ](Source_URL)
