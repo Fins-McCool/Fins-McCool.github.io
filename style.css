@@ -1,8 +1,8 @@
 body {
     font-family: Times New Roman, Arial;
     margin: 20px;
-    background-color: #f4f7f6;
-    color: #333;
+    background-color: #e6d0f5;
+    color: #fff;
 }
 
 header {
@@ -17,7 +17,7 @@ header {
 }
 
 .month-card {
-    background: #fff;
+    background: #f5d0f1;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -26,7 +26,7 @@ header {
 .month-card h2 {
     text-align: center;
     margin-top: 0;
-    color: #4a90e2;
+    color: #f5e6d0;
 }
 
 .days-grid {
@@ -39,12 +39,12 @@ header {
 
 .day-name {
     font-weight: bold;
-    color: #666;
+    color: #fff;
 }
 
 .day {
     padding: 8px 0;
-    background: #f9f9f9;
+    background: #e6d0f5;
     border-radius: 4px;
     cursor: pointer;
     position: relative;
@@ -52,7 +52,7 @@ header {
 }
 
 .day:hover {
-    background: #e1ecf4;
+    background: #f5d0f1;
 }
 
 .day.has-tasks::after {
@@ -63,7 +63,7 @@ header {
     transform: translateX(-50%);
     width: 5px;
     height: 5px;
-    background-color: #ff5e5e;
+    background-color: #f5e6d0;
     border-radius: 50%;
 }
 
