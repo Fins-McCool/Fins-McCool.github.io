@@ -1,4 +1,4 @@
-# Fins-McCool.github.io
+# **Fins-McCool.github.io**
 ## ***Yearly Planner***
 
 This application includes: 
