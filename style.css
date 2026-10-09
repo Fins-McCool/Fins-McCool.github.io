@@ -17,7 +17,7 @@ header {
 }
 
 .month-card {
-    background: #f5d0f1;
+    background: #e6d0f5;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -44,7 +44,7 @@ header {
 
 .day {
     padding: 8px 0;
-    background: #e6d0f5;
+    background: #f5d0f1;
     border-radius: 4px;
     cursor: pointer;
     position: relative;
