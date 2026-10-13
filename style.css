@@ -63,7 +63,7 @@ header {
     transform: translateX(-50%);
     width: 5px;
     height: 5px;
-    background-color: #fff;
+    background-color: #000;
     border-radius: 50%;
 }
 
