@@ -12,13 +12,3 @@
    1. A text box will come up for the task.
 2. Put task in text box.
    1. When viewing the whole calendar, one can see all tasks that have been added.
-
-| ## Table of Contents |
-| :---: |
-| [About the Site](#<a href="README.md">README</a>) |
-| [Usage](#<a href="about.html">About</a>) |
-
-## Table of Contents
-- [About the Project](#about-the-project)
-- [Installation](#installation)
-- [Usage](#usage)
