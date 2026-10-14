@@ -13,7 +13,12 @@
 2. Put task in text box.
    1. When viewing the whole calendar, one can see all tasks that have been added.
 
-| First Header  | Second Header |
-| :---: | :---: |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| ## Table of Contents |
+| :---: |
+| Content Cell  |
+| Content Cell  |
+
+## Table of Contents
+- [About the Project](#about-the-project)
+- [Installation](#installation)
+- [Usage](#usage)
