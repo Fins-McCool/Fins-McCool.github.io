@@ -4,6 +4,7 @@
 ***This application includes:***
 
 - A calendar with customizable tasks.
+  - Multiple tasks can be in one day! 
 - Cute colours.
 
 ***How to use this application:***
