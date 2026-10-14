@@ -15,7 +15,7 @@
 
 | ## Table of Contents |
 | :---: |
-| [About the Site](#<a href="about.html">About</a>) |
+| [About the Site](#<a href="README.md">README</a>) |
 | [Usage](#<a href="about.html">About</a>) |
 
 ## Table of Contents
