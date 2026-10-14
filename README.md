@@ -15,8 +15,8 @@
 
 | ## Table of Contents |
 | :---: |
-| Content Cell  |
-| Content Cell  |
+| About the Site |
+| Usage |
 
 ## Table of Contents
 - [About the Project](#about-the-project)
