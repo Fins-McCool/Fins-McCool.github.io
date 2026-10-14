@@ -15,7 +15,7 @@
 
 | ## Table of Contents |
 | :---: |
-| [About the Site](#about.html) |
+| [About the Site](#[about.html](https://github.com/Fins-McCool/Fins-McCool.github.io/blob/main/about.html)) |
 | [Usage](#about.html) |
 
 ## Table of Contents
