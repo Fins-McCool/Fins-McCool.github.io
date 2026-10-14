@@ -15,8 +15,8 @@
 
 | ## Table of Contents |
 | :---: |
-| About the Site (#about.html) |
-| Usage (#about.html) |
+| [About the Site](#about.html) |
+| [Usage](#about.html) |
 
 ## Table of Contents
 - [About the Project](#about-the-project)
