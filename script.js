@@ -92,6 +92,14 @@ document.getElementById('save-task-btn').addEventListener('click', () => {
     document.querySelector(`[data-date="${activeDateKey}"]`).classList.add('has-tasks');
 });
 
+const deleteButton = document.querySelector('.remove-btn');
+
+deleteButton.addEventListener('click', function(event) {
+    const taskItem = event.target.parentElement; 
+    
+    taskItem.remove(); 
+});
+
 document.getElementById('close-modal-btn').addEventListener('click', () => {
     modal.classList.add('hidden');
 });
